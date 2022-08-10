@@ -4,16 +4,554 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="" />
     <title>Mogo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Roboto:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css?family=Kaushan+Script"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="reset.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div>ád</div>
+    <div class="overlay">
+      <!-- -------- Start header -------- -->
+      <header class="header">
+        <div class="container header-inner">
+          <img src="./image/header-logo.png" alt="" class="header-logo" />
+          <ul class="header-list">
+            <li class="header-list__item">
+              <a href="#about" class="header-list__item--link active">About</a>
+            </li>
+            <li class="header-list__item">
+              <a href="#service" class="header-list__item--link">Service</a>
+            </li>
+            <li class="header-list__item">
+              <a href="#work" class="header-list__item--link">Work</a>
+            </li>
+            <li class="header-list__item">
+              <a href="#blog" class="header-list__item--link">Blog</a>
+            </li>
+            <li class="header-list__item">
+              <a href="#contact" class="header-list__item--link">Contact</a>
+            </li>
+            <li class="header-list__item">
+              <i class="fa fa-cart-shopping header-list__item--cart"></i>
+            </li>
+            <li class="header-list__item">
+              <i class="fa fa-magnifying-glass header-list__item--search"></i>
+            </li>
+          </ul>
+        </div>
+      </header>
+
+      <!-- -------- End header -------- -->
+
+      <!-- -------- Start Banner -------- -->
+      <section class="banner">
+        <div class="container banner-inner">
+          <div class="banner-content">
+            <div class="banner-content__item fade">
+              <h2 class="banner-content__title--top title__top">
+                Creative Template
+              </h2>
+              <h1 class="banner-content__title title">
+                <span>Welcome</span><span>to mogo1</span>
+              </h1>
+              <div class="banner-content__line line"></div>
+              <div class="banner-content__button">
+                <a href="#">Learn more</a>
+              </div>
+            </div>
+            <div class="banner-content__item fade">
+              <h2 class="banner-content__title--top title__top">
+                Creative Template
+              </h2>
+              <h1 class="banner-content__title title">
+                <span>Welcome</span><span>to mogo2</span>
+              </h1>
+              <div class="banner-content__line line"></div>
+              <div class="banner-content__button">
+                <a href="#">Learn more</a>
+              </div>
+            </div>
+            <div class="banner-content__item fade">
+              <h2 class="banner-content__title--top title__top">
+                Creative Template
+              </h2>
+              <h1 class="banner-content__title title">
+                <span>Welcome</span><span>to mogo3</span>
+              </h1>
+              <div class="banner-content__line line"></div>
+              <div class="banner-content__button">
+                <a href="#">Learn more</a>
+              </div>
+            </div>
+            <div class="banner-content__item fade">
+              <h2 class="banner-content__title--top title__top">
+                Creative Template
+              </h2>
+              <h1 class="banner-content__title title">
+                <span>Welcome</span><span>to mogo4</span>
+              </h1>
+              <div class="banner-content__line line"></div>
+              <div class="banner-content__button">
+                <a href="#">Learn more</a>
+              </div>
+            </div>
+          </div>
+          <div class="banner-bottom">
+            <div class="banner-bottom__item" onclick="currentSliderBanner(1)">
+              <div class="banner-bottom__item--line">
+                <div
+                  class="banner-bottom__item--line__process banner-slider__active"
+                ></div>
+              </div>
+              <div class="banner-bottom__item--content">
+                <span class="banner-bottom__item--number">01</span>&nbsp;<span
+                  class="banner-bottom__item-text"
+                  >Intro</span
+                >
+              </div>
+            </div>
+            <div class="banner-bottom__item" onclick="currentSliderBanner(2)">
+              <div class="banner-bottom__item--line">
+                <div class="banner-bottom__item--line__process"></div>
+              </div>
+              <div class="banner-bottom__item--content">
+                <span class="banner-bottom__item--number">02</span>&nbsp;<span
+                  class="banner-bottom__item-text"
+                  >Work</span
+                >
+              </div>
+            </div>
+            <div class="banner-bottom__item" onclick="currentSliderBanner(3)">
+              <div class="banner-bottom__item--line">
+                <div class="banner-bottom__item--line__process"></div>
+              </div>
+              <div class="banner-bottom__item--content">
+                <span class="banner-bottom__item--number">03</span>&nbsp;<span
+                  class="banner-bottom__item-text"
+                  >About</span
+                >
+              </div>
+            </div>
+            <div class="banner-bottom__item" onclick="currentSliderBanner(4)">
+              <div class="banner-bottom__item--line">
+                <div class="banner-bottom__item--line__process"></div>
+              </div>
+              <div class="banner-bottom__item--content">
+                <span class="banner-bottom__item--number">04</span>&nbsp;<span
+                  class="banner-bottom__item-text"
+                  >Contacts</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- -------- End Banner -------- -->
+
+      <!-- -------- Start About -------- -->
+      <section class="about">
+        <div class="container about-inner">
+          <div class="about-heading heading">
+            <h4 class="about-heading__title--top title__top">What we do</h4>
+            <h3 class="about-heading__title title">Story about us</h3>
+            <div class="about-heading__line line"></div>
+            <div class="about-heading__desc desc">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </div>
+          </div>
+          <div class="about-list">
+            <a href="#" class="about-list__item">
+              <div class="abcd">
+                <!-- <img
+                src="https://images.unsplash.com/photo-1511268594014-0e9d3ea5c33e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                alt="ád"
+                class="about-list__item--img"
+              /> -->
+              </div>
+              <!-- <div class="abc">
+                <div class="about-list__item--content">
+                  <img src="./image/about-user.png" />
+                  <span>Super Team</span>
+                </div>
+              </div> -->
+            </a>
+            <a href="#" class="about-list__item">
+              <img
+                src="https://images.unsplash.com/photo-1562737794-88835094442e?ixlib=rb-1.2.1&ixi=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1530&q=80"
+                alt=""
+                class="about-list__item--img"
+              />
+              <div class="about-list__item--content">
+                <img src="./image/about-user.png" />
+                <span>Super Team</span>
+              </div>
+            </a>
+            <a href="#" class="about-list__item">
+              <img
+                src="https://images.unsplash.com/photo-1505934333218-8fe21ff87e69?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                alt=""
+                class="about-list__item--img"
+              />
+              <div class="about-list__item--content">
+                <img src="./image/about-user.png" />
+                <span>Super Team</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- -------- End About -------- -->
+
+      <!-- -------- Start Counter -------- -->
+
+      <section class="counter">
+        <div class="container counter-inner">
+          <div class="counter-item">
+            <span class="counter-item__number">42</span>
+            <span class="counter-item__text">Web design projects</span>
+          </div>
+          <div class="counter-item">
+            <span class="counter-item__number">123</span>
+            <span class="counter-item__text">Happy client</span>
+          </div>
+          <div class="counter-item">
+            <span class="counter-item__number">15</span>
+            <span class="counter-item__text">Award winner</span>
+          </div>
+          <div class="counter-item">
+            <span class="counter-item__number">99</span>
+            <span class="counter-item__text">Cup of coffee</span>
+          </div>
+          <div class="counter-item">
+            <span class="counter-item__number">24</span>
+            <span class="counter-item__text">Members</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- -------- End Counter -------- -->
+
+      <!-- -------- Start Amazing -------- -->
+
+      <section class="amazing">
+        <div class="container amazing-inner">
+          <div class="heading">
+            <h4 class="title__top">We work with</h4>
+            <h3 class="title">Amazing services</h3>
+            <div class="line"></div>
+          </div>
+          <div class="amazing-content">
+            <div class="amazing-content__item">
+              <img
+                src="./image/service-alarm.png"
+                alt=""
+                class="amazing-content__image"
+              />
+              <div class="image-content__item--right">
+                <div class="image-content__item--right__title">Photography</div>
+                <div class="image-content__item--right__des">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </div>
+              </div>
+            </div>
+            <div class="amazing-content__item">
+              <img
+                src="./image/service-line-graph.png"
+                alt=""
+                class="amazing-content__image"
+              />
+              <div class="image-content__item--right">
+                <div class="image-content__item--right__title">Web design</div>
+                <div class="image-content__item--right__des">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </div>
+              </div>
+            </div>
+            <div class="amazing-content__item">
+              <img
+                src="./image/service-computer.png"
+                alt=""
+                class="amazing-content__image"
+              />
+              <div class="image-content__item--right">
+                <div class="image-content__item--right__title">Creativity</div>
+                <div class="image-content__item--right__des">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </div>
+              </div>
+            </div>
+            <div class="amazing-content__item">
+              <img
+                src="./image/service-book.png"
+                alt=""
+                class="amazing-content__image"
+              />
+              <div class="image-content__item--right">
+                <div class="image-content__item--right__title">Ceo</div>
+                <div class="image-content__item--right__des">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </div>
+              </div>
+            </div>
+            <div class="amazing-content__item">
+              <img
+                src="./image/service-home.png"
+                alt=""
+                class="amazing-content__image"
+              />
+              <div class="image-content__item--right">
+                <div class="image-content__item--right__title">Css/html</div>
+                <div class="image-content__item--right__des">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </div>
+              </div>
+            </div>
+            <div class="amazing-content__item">
+              <img
+                src="./image/service-image.png"
+                alt=""
+                class="amazing-content__image"
+              />
+              <div class="image-content__item--right">
+                <div class="image-content__item--right__title">Digital</div>
+                <div class="image-content__item--right__des">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- -------- End Amazing -------- -->
+
+      <!-- -------- Start Devices -------- -->
+      <section class="devices">
+        <div class="container devices-inner">
+          <div class="heading">
+            <h4 class="title__top">For all devices</h4>
+            <h3 class="title">Unique design</h3>
+            <div class="line"></div>
+        </div>
+        <div class="devices-content">
+          <img src="./image/devices-ipad.png" alt="" class="devices-content__ipad">
+          <img src="./image/devices-mobile.png" alt="" class="devices-content__mobile">
+        </div>
+      </section>
+
+      <!-- -------- End Devices -------- -->
+
+        <!-- -------- Start Services -------- -->
+        <div class="services">
+            <div class="container services-inner">
+              <div class="heading">
+                <h4 class="title__top">We work with</h4>
+                <h3 class="title">Amazing services</h3>
+                <div class="line"></div>
+                <div class="desc">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                  enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                  nisi ut aliquip ex ea commodo consequat.
+                </div>
+            </div>
+            <div class="services-content">
+              <img src="./image/service-img.png" alt="" class="services-content__image">
+              <ul class="services-content__collapse">
+                  <li class="services-content__collapse--item">
+                    <a class="collapse-toggle" href="#">
+                      <div>
+                        <img src="./image/col-photography.png" alt="">
+                        <span>Photography</span>
+                      </div>
+                      <i class="fa fa-chevron-down"></i></a>
+                      <p class="collapse-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                          sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                           sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                  </li> 
+                  <li class="services-content__collapse--item">
+                    <a class="collapse-toggle" href="#">
+                      <div>
+                        <img src="./image/col-equa.png" alt="">
+                        <span>Creativity</span>
+                      </div>
+                      <i class="fa fa-chevron-down"></i></a>
+                      <p class="collapse-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                          sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  </li>
+                  <li class="services-content__collapse--item">
+                    <a class="collapse-toggle" href="#">
+                      <div>
+                        <img src="./image/col-bull.png" alt="">
+                        <span>Web design</span>
+                      </div>
+                      <i class="fa fa-chevron-down"></i></a>
+                      <p class="collapse-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                          sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  </li>
+              </ul>
+            </div>
+            <div class="services-slider">
+              <div class="services-slider__item">
+                <img src="./image/services-slider-mess.png" alt="" class="services-slider-img">
+                <div class="services-slider__content">
+                  <span class="services-slider__content--des">
+                    “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
+                  </span>
+                  <div class="services-slider__content--author">
+                    <div class="line"></div>
+                    <span class="title__top">Jon Doe</span>
+                  </div>
+                </div>
+              </div>
+              <div class="services-slider__item">
+                <img src="./image/services-slider-mess.png" alt="" class="services-slider-img">
+                <div class="services-slider__content">
+                  <span class="services-slider__content--des">
+                    “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
+                  </span>
+                  <div class="services-slider__content--author">
+                    <div class="line"></div>
+                    <span class="title__top">Jon Doe2</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+    <!-- -------- End Services -------- -->
+
+    <!-- -------- Start Team -------- -->
+    <div class="teams">
+      <div class="container teams-inner">
+        <div class="heading">
+          <h4 class="title__top">Who are we</h4>
+          <h3 class="title">Meet our team</h3>
+          <div class="line"></div>
+          <div class="desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+            enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat.
+          </div>
+        </div>
+        <div class="teams-list">
+          <div class="teams-list__item">
+            <img src="./image/team1.png" alt="" class="teams-list__item-avatar">
+            <h3 class="teams-list__item-name">Matthew dix</h3>
+            <div class="teams-list__item-job">Graphic Design</div>
+          </div>
+          <div class="teams-list__item">
+            <img src="./image/team2.png" alt="" class="teams-list__item-avatar">
+            <h3 class="teams-list__item-name">Christopher Campbell</h3>
+            <div class="teams-list__item-job">Branding/UX design</div>
+          </div>
+          <div class="teams-list__item">
+            <img src="./image/team1.png" alt="" class="teams-list__item-avatar">
+            <h3 class="teams-list__item-name">Michael Fertig </h3>
+            <div class="teams-list__item-job">Developer</div>
+          </div>
+        </div>
+        <div class="teams-slider">
+          <img src="./image/team-slider.png" alt="">
+          <img src="./image/team-slider.png" alt="">
+        </div>
+      </div>
+    </div>
+
+    <!-- -------- End Team -------- -->
+
+    <!-- -------- Start Work -------- -->
+<div class="work">
+  <div class="container work-inner">
+    <div class="heading">
+      <h4 class="title__top">What we do </h4>
+      <h3 class="title">Some of our work</h3>
+      <div class="desc">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+        enim ad minim veniam, quis nostrud exercitation ullamco laboris
+        nisi ut aliquip ex ea commodo consequat.
+      </div>
+    </div>
+  </div>
+  <div class="work-content">
+    <div class="work-content__block1.1">
+      <div class="work-content__block1">
+        <img src="./image/work-1.png" alt="" class="work-content__img">
+        <img src="./image/work-2.png" alt="" class="work-content__img">
+      </div>
+      <div class="work-content__block2">
+        <img src="./image/work3.png" alt="" class="work-content__img">
+        <img src="./image/work-6.png" alt="" class="work-content__img">
+      </div>
+    </div>
+    <div class="work-content__block3">
+      <img src="./image/work-4.png" alt="" class="work-content__img">
+    </div>
+    <div class="work-content__block4">
+      <img src="./image/work-6.png" alt="" class="work-content__img">
+      <img src="./image/work-8.png" alt="" class="work-content__img">
+    </div>
+  </div>
+</div>
+    <!-- -------- End Work -------- -->
+
+    </div>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
     <script src="./app.js"></script>
   </body>
 </html>
