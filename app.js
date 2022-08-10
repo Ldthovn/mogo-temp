@@ -52,7 +52,7 @@ $(".collapse-toggle").click(function (e) {
 // Slider Service
 
 $(document).ready(function () {
-  $(".services-slider").slick({
+  $(".slider-global").slick({
     slidesToShow: 1,
     dots: false,
     arrows: true,
