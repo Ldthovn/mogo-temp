@@ -1,3 +1,19 @@
+window.onscroll = function () {
+  console.log(document.body.scrollTop);
+  console.log(document.documentElement.scrollTop);
+  if (
+    document.body.scrollTop > 1000 ||
+    document.documentElement.scrollTop > 1000
+  ) {
+    document.getElementsByClassName("header")[0].style.background = "#e78182e8";
+    document.getElementsByClassName("header")[0].style.padding = "2rem 0";
+  } else {
+    document.getElementsByClassName("header")[0].style.background =
+      "transparent";
+    document.getElementsByClassName("header")[0].style.padding = "4rem 0";
+  }
+};
+
 // ----------- Slider banner ---------------
 
 let slideIndex = 1;
@@ -80,3 +96,22 @@ $(document).ready(function () {
     infinite: true,
   });
 });
+
+$(document).ready(function () {
+  $(".blog-list").slick({
+    slidesToShow: 3,
+    dots: false,
+    arrows: false,
+    infinite: true,
+  });
+});
+
+// Toggle menu
+
+function openMenu() {
+  document.getElementsByClassName("header-mobile")[0].style.display = "block";
+}
+
+function closeMenu() {
+  document.getElementsByClassName("header-mobile")[0].style.display = "none";
+}
