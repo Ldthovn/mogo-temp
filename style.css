@@ -122,6 +122,37 @@ img {
   font-style: italic;
 }
 
+.slick-prev {
+  left: 0;
+}
+
+.slick-next {
+  right: 0;
+}
+
+.slick-arrow {
+  /* Căn giữa theo chiều dọc abscentery */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  line-height: 1;
+  z-index: 1;
+  /* tsall tra */
+  transition: all 0.2s linear;
+}
+
+.slick-arrow:hover {
+  background-color: #2cccff;
+  color: #fff;
+}
+
 /* -------- Start Header -------- */
 
 .header {

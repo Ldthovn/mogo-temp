@@ -57,6 +57,18 @@ $(document).ready(function () {
     dots: false,
     arrows: true,
     infinite: true,
+    prevArrow:
+      "<button type='button' class='slick-prev pull-left'><i class='fa fa-angle-left slick-arrow aria-hidden='true'></i></button>",
+    nextArrow:
+      "<button type='button' class='slick-next pull-right'><i class='fa fa-angle-right slick-arrow' aria-hidden='true'></i></button>",
+    responsive: [
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+        },
+      },
+    ],
   });
 });
 
