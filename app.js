@@ -103,6 +103,14 @@ $(document).ready(function () {
     dots: false,
     arrows: false,
     infinite: true,
+    responsive: [
+      {
+        breakpoint: 659,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   });
 });
 
