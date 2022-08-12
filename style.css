@@ -426,79 +426,63 @@ img {
 
 /* -------- Start About -------- */
 
+.about {
+}
+
 .about-list {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding-bottom: 10rem;
+  margin-bottom: 9rem;
 }
 
-.about-list__item {
-  display: block;
-  float: left;
-  position: relative;
-  overflow: hidden;
-  width: 30%;
-  background-color: red;
+.about-list__overlay {
+  width: 32%;
+  margin-right: 2%;
+  background-color: #95e1d3;
 }
 
-.about-list__item:hover .abcd {
-  top: -10px;
-  left: -10px;
-  right: 10px;
-  bottom: 10px;
-}
-
-.abcd {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: #666;
+.about-list__overlay:last-child {
+  margin-right: 0;
 }
 
 .about-list__item--img {
-  width: auto;
-  height: 25rem;
   object-fit: cover;
 }
 
-.abc {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0;
+.about-list__overlay:hover .about-list__item {
+  transform: translate(-10px, -10px);
+}
+
+.about-list__overlay:hover .about-list__item--hover {
   background-image: linear-gradient(to bottom, #e78182e8, #f1da8ae0);
 }
 
-.about-list__item:hover .abc {
-  opacity: 1;
-  top: -10px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.about-list__item:hover .about-list__item--content {
+.about-list__overlay:hover .about-list__item--content {
   opacity: 1;
   visibility: visible;
 }
-.about-list__item--content {
+
+.about-list__item {
+  position: relative;
+  transition: all 0.2s linear;
+}
+
+.about-list__item--hover {
   position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.about-list__item--content {
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   opacity: 0;
   visibility: hidden;
-  z-index: 1;
 }
 
 .about-list__item--content span {
@@ -508,7 +492,7 @@ img {
   text-transform: uppercase;
 }
 
-.about-list__item--content img {
+.about-list__item--hover .about-list__item--content img {
   width: auto;
   margin-bottom: 1.2rem;
 }
@@ -742,6 +726,7 @@ img {
 .teams-list {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   border-radius: 4px;
 }
 
@@ -749,6 +734,68 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 32%;
+  margin-right: 2%;
+}
+
+.teams-list__item:last-child {
+  margin-right: 0;
+}
+
+.teams-list__item--overlay {
+  background-color: #95e1d3;
+}
+
+.teams-list__item--overlay:hover .teams-list__item--hover {
+  opacity: 1;
+  visibility: visible;
+}
+
+.teams-list__item--overlay:hover .teams-list__item--wrapper {
+  transform: translate(-10px, -10px);
+}
+
+.teams-list__item--wrapper {
+  position: relative;
+  transition: all 0.2s linear;
+}
+.teams-list__item--hover {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to bottom, #e78182e8, #f1da8ae0);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.teams-list__item--hover-bg {
+  width: 5rem;
+  height: 5rem;
+  position: relative;
+  background-color: #fce38a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #f38181;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+.teams-list__item--hover-bg:not(:last-child) {
+  border-right: 0;
+}
+
+.teams-list__item--hover-bg:hover {
+  background-color: #f38181;
+}
+
+.teams-list__item--hover img {
+  position: absolute;
+  width: auto;
 }
 
 .teams-list__item-name {
@@ -917,6 +964,7 @@ img {
 
 .blog-list__item {
   margin-right: 2rem;
+  margin-left: 1rem;
   cursor: pointer;
 }
 
@@ -1459,6 +1507,24 @@ img {
   .people {
     height: 96rem;
   }
+
+  .about-list__overlay {
+    width: 48%;
+    margin-right: 4%;
+    margin-bottom: 4%;
+  }
+  .about-list__overlay:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  .teams-list__item {
+    width: 48%;
+    margin-right: 4%;
+    margin-bottom: 4%;
+  }
+  .teams-list__item:nth-child(2n) {
+    margin-right: 0;
+  }
 }
 
 @media (max-width: 660px) {
@@ -1565,6 +1631,8 @@ img {
   }
 
   .teams-list__item {
+    width: 100%;
+    margin-right: 0;
     margin-bottom: 2rem;
   }
 
@@ -1592,6 +1660,11 @@ img {
   .footer-content__blog,
   .footer-content__instar {
     max-width: 100%;
+  }
+
+  .about-list__overlay {
+    width: 100%;
+    margin-right: 0;
   }
 }
 
